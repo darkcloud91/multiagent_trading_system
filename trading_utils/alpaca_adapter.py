@@ -1,15 +1,16 @@
 import os
+from typing import Optional
 from alpaca.trading.client import TradingClient
 from alpaca.trading.requests import MarketOrderRequest, GetOrdersRequest
 from alpaca.trading.enums import OrderSide, TimeInForce, QueryOrderStatus
-from alpaca.data.historical import CryptoHistoricalDataClient, StockHistoricalDataClient
+from alpaca.data.historical import StockHistoricalDataClient
 from alpaca.data.requests import StockLatestQuoteRequest
 from alpaca.data.enums import DataFeed
-
 
 class AlpacaAPI:
     def __init__(self):
         """Inicializa la clase con las claves de la API desde variables de entorno."""
+        # ✅ Corregido a los nombres de variable estándar de la SDK de Alpaca
         self.api_key = os.getenv('ALPACA_API_KEY')
         self.secret_key = os.getenv('ALPACA_SECRET_KEY')
         self.is_paper_trading = os.getenv('ALPACA_PAPER_TRADING', 'False').lower() == 'true'
@@ -19,7 +20,6 @@ class AlpacaAPI:
 
         self.trading_client = TradingClient(self.api_key, self.secret_key, paper=self.is_paper_trading)
         self.stock_data_client = StockHistoricalDataClient(self.api_key, self.secret_key)
-        self.crypto_data_client = CryptoHistoricalDataClient(self.api_key, self.secret_key)
 
     def get_account_info(self):
         """Obtiene y devuelve la información de la cuenta."""
@@ -30,33 +30,37 @@ class AlpacaAPI:
             print(f"Error al obtener la información de la cuenta: {e}")
             return None
 
-    def submit_order(self, symbol: str, quantity: float, side: str):
+    def submit_order(self, symbol: str, side: str, qty: Optional[float] = None, notional: Optional[float] = None):
         """
-        Ejecuta una orden de mercado para un símbolo y cantidad dados.
+        Ejecuta una orden de mercado para un símbolo y cantidad/valor nocional dados.
 
         Args:
             symbol (str): El ticker de la acción (e.g., "AAPL").
-            quantity (float): El número de acciones a comprar o vender.
             side (str): El tipo de operación ("buy" o "sell").
+            qty (Optional[float]): El número de acciones a operar.
+            notional (Optional[float]): La cantidad de dinero a invertir/vender.
         """
+        if not (qty or notional) or (qty and notional):
+            raise ValueError("Se debe proporcionar 'qty' o 'notional', pero no ambos.")
+
         if side.lower() == "buy":
             order_side = OrderSide.BUY
         elif side.lower() == "sell":
             order_side = OrderSide.SELL
         else:
-            print("Lado de la orden inválido. Debe ser 'buy' o 'sell'.")
-            return None
+            raise ValueError("Lado de la orden inválido. Debe ser 'buy' o 'sell'.")
 
         market_order_data = MarketOrderRequest(
             symbol=symbol,
-            qty=quantity,
+            qty=qty,
+            notional=notional,
             side=order_side,
             time_in_force=TimeInForce.DAY
         )
 
         try:
             market_order = self.trading_client.submit_order(order_data=market_order_data)
-            print(f"Orden de {side} para {quantity} acciones de {symbol} enviada.")
+            print(f"Orden de {side} para {symbol} enviada.")
             return market_order
         except Exception as e:
             print(f"Error al enviar la orden: {e}")
@@ -69,23 +73,6 @@ class AlpacaAPI:
             return positions
         except Exception as e:
             print(f"Error al obtener las posiciones abiertas: {e}")
-            return None
-
-
-    def get_market_data23(self, symbol: str):
-        """Devuelve la última cotización para un símbolo."""
-        try:
-            request_params = StockLatestQuoteRequest(symbol_or_symbols=symbol, feed=DataFeed.IEX)
-            latest_quote = self.stock_data_client.get_stock_latest_quote(request_params)
-            
-            if latest_quote and latest_quote.quote:
-                print(f"Última cotización para {symbol}: {latest_quote.quote}")
-                return latest_quote.quote
-            else:
-                print(f"No se encontró una cotización para {symbol}.")
-                return None
-        except Exception as e:
-            print(f"Error al obtener datos de mercado para {symbol}: {e}")
             return None
 
     def get_market_data(self, symbol: str):
@@ -123,4 +110,3 @@ class AlpacaAPI:
         except Exception as e:
             print(f"Error al cancelar la orden {order_id}: {e}")
             return None
-

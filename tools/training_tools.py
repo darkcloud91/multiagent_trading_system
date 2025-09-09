@@ -268,11 +268,3 @@ def check_existing_model():
         message = "No se ha encontrado ningún modelo entrenado."
 
     return {"status": "success", "message": message, "files_check": found_files}
-
-
-
-
-"""
-if __name__ == "__main__":
-    train_multiasset()
-    """

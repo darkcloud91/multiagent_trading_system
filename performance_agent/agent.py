@@ -1,6 +1,6 @@
+
 from google.adk.agents import LlmAgent
-from google.adk.agents.callback_context import CallbackContext
-from tools.tools import calculate_performance
+from tools.performance_tools import calculate_performance
 
 
 performance_agent = LlmAgent(
@@ -16,5 +16,5 @@ performance_agent = LlmAgent(
     
     Your responses should be clear, informative, and focused on providing a comprehensive analysis of the trades.
     """,
-    tools=[calculate_performance,]
+    tools=[calculate_performance]
 )
