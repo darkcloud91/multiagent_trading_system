@@ -1,0 +1,20 @@
+from google.adk.agents import LlmAgent
+from google.adk.agents.callback_context import CallbackContext
+from tools.tools import calculate_performance
+
+
+performance_agent = LlmAgent(
+    model="gemini-2.5-flash",
+    name="performance_agent",
+    description="An agent specialized in analyzing the financial performance of trading operations.",
+    instruction="""
+    You are a specialized agent for measuring trading performance.
+    Your main task is to calculate and report key metrics for closed trading positions.
+    
+    Use the 'calculate_performance_tool' to generate a detailed report that includes financial metrics
+    (like total PnL and win rate) and model-specific metrics (like prediction accuracy).
+    
+    Your responses should be clear, informative, and focused on providing a comprehensive analysis of the trades.
+    """,
+    tools=[calculate_performance,]
+)

@@ -1,0 +1,329 @@
+{
+  "ranking_up": [],
+  "all_results": [
+    {
+      "symbol": "AAPL",
+      "error": "No existe datasets\\predict\\AAPL_predict.csv"
+    },
+    {
+      "symbol": "MSFT",
+      "error": "No existe datasets\\predict\\MSFT_predict.csv"
+    },
+    {
+      "symbol": "GOOG",
+      "error": "No existe datasets\\predict\\GOOG_predict.csv"
+    },
+    {
+      "symbol": "AMZN",
+      "error": "No existe datasets\\predict\\AMZN_predict.csv"
+    },
+    {
+      "symbol": "META",
+      "error": "No existe datasets\\predict\\META_predict.csv"
+    },
+    {
+      "symbol": "NVDA",
+      "error": "No existe datasets\\predict\\NVDA_predict.csv"
+    },
+    {
+      "symbol": "TSLA",
+      "error": "No existe datasets\\predict\\TSLA_predict.csv"
+    },
+    {
+      "symbol": "INTC",
+      "error": "No existe datasets\\predict\\INTC_predict.csv"
+    },
+    {
+      "symbol": "ADBE",
+      "error": "No existe datasets\\predict\\ADBE_predict.csv"
+    },
+    {
+      "symbol": "PEP",
+      "error": "No existe datasets\\predict\\PEP_predict.csv"
+    },
+    {
+      "symbol": "AVGO",
+      "error": "No existe datasets\\predict\\AVGO_predict.csv"
+    },
+    {
+      "symbol": "COST",
+      "error": "No existe datasets\\predict\\COST_predict.csv"
+    },
+    {
+      "symbol": "CSCO",
+      "error": "No existe datasets\\predict\\CSCO_predict.csv"
+    },
+    {
+      "symbol": "NFLX",
+      "error": "No existe datasets\\predict\\NFLX_predict.csv"
+    },
+    {
+      "symbol": "AMD",
+      "error": "No existe datasets\\predict\\AMD_predict.csv"
+    },
+    {
+      "symbol": "PYPL",
+      "error": "No existe datasets\\predict\\PYPL_predict.csv"
+    },
+    {
+      "symbol": "TMUS",
+      "error": "No existe datasets\\predict\\TMUS_predict.csv"
+    },
+    {
+      "symbol": "TXN",
+      "error": "No existe datasets\\predict\\TXN_predict.csv"
+    },
+    {
+      "symbol": "AMAT",
+      "error": "No existe datasets\\predict\\AMAT_predict.csv"
+    },
+    {
+      "symbol": "QCOM",
+      "error": "No existe datasets\\predict\\QCOM_predict.csv"
+    },
+    {
+      "symbol": "INTU",
+      "error": "No existe datasets\\predict\\INTU_predict.csv"
+    },
+    {
+      "symbol": "SBUX",
+      "error": "No existe datasets\\predict\\SBUX_predict.csv"
+    },
+    {
+      "symbol": "ISRG",
+      "error": "No existe datasets\\predict\\ISRG_predict.csv"
+    },
+    {
+      "symbol": "ADI",
+      "error": "No existe datasets\\predict\\ADI_predict.csv"
+    },
+    {
+      "symbol": "MDLZ",
+      "error": "No existe datasets\\predict\\MDLZ_predict.csv"
+    },
+    {
+      "symbol": "BKNG",
+      "error": "No existe datasets\\predict\\BKNG_predict.csv"
+    },
+    {
+      "symbol": "VRTX",
+      "error": "No existe datasets\\predict\\VRTX_predict.csv"
+    },
+    {
+      "symbol": "LRCX",
+      "error": "No existe datasets\\predict\\LRCX_predict.csv"
+    },
+    {
+      "symbol": "MU",
+      "error": "No existe datasets\\predict\\MU_predict.csv"
+    },
+    {
+      "symbol": "CHTR",
+      "error": "No existe datasets\\predict\\CHTR_predict.csv"
+    },
+    {
+      "symbol": "GILD",
+      "error": "No existe datasets\\predict\\GILD_predict.csv"
+    },
+    {
+      "symbol": "REGN",
+      "error": "No existe datasets\\predict\\REGN_predict.csv"
+    },
+    {
+      "symbol": "FISV",
+      "error": "No existe datasets\\predict\\FISV_predict.csv"
+    },
+    {
+      "symbol": "ASML",
+      "error": "No existe datasets\\predict\\ASML_predict.csv"
+    },
+    {
+      "symbol": "ADP",
+      "error": "No existe datasets\\predict\\ADP_predict.csv"
+    },
+    {
+      "symbol": "PANW",
+      "error": "No existe datasets\\predict\\PANW_predict.csv"
+    },
+    {
+      "symbol": "MAR",
+      "error": "No existe datasets\\predict\\MAR_predict.csv"
+    },
+    {
+      "symbol": "CDNS",
+      "error": "No existe datasets\\predict\\CDNS_predict.csv"
+    },
+    {
+      "symbol": "FTNT",
+      "error": "No existe datasets\\predict\\FTNT_predict.csv"
+    },
+    {
+      "symbol": "MNST",
+      "error": "No existe datasets\\predict\\MNST_predict.csv"
+    },
+    {
+      "symbol": "ROST",
+      "error": "No existe datasets\\predict\\ROST_predict.csv"
+    },
+    {
+      "symbol": "KLAC",
+      "error": "No existe datasets\\predict\\KLAC_predict.csv"
+    },
+    {
+      "symbol": "WDAY",
+      "error": "No existe datasets\\predict\\WDAY_predict.csv"
+    },
+    {
+      "symbol": "BIIB",
+      "error": "No existe datasets\\predict\\BIIB_predict.csv"
+    },
+    {
+      "symbol": "CTSH",
+      "error": "No existe datasets\\predict\\CTSH_predict.csv"
+    },
+    {
+      "symbol": "EA",
+      "error": "No existe datasets\\predict\\EA_predict.csv"
+    },
+    {
+      "symbol": "EXC",
+      "error": "No existe datasets\\predict\\EXC_predict.csv"
+    },
+    {
+      "symbol": "IDXX",
+      "error": "No existe datasets\\predict\\IDXX_predict.csv"
+    },
+    {
+      "symbol": "ORLY",
+      "error": "No existe datasets\\predict\\ORLY_predict.csv"
+    },
+    {
+      "symbol": "MELI",
+      "error": "No existe datasets\\predict\\MELI_predict.csv"
+    },
+    {
+      "symbol": "NXPI",
+      "error": "No existe datasets\\predict\\NXPI_predict.csv"
+    },
+    {
+      "symbol": "WBD",
+      "error": "No existe datasets\\predict\\WBD_predict.csv"
+    },
+    {
+      "symbol": "KDP",
+      "error": "No existe datasets\\predict\\KDP_predict.csv"
+    },
+    {
+      "symbol": "PAYX",
+      "error": "No existe datasets\\predict\\PAYX_predict.csv"
+    },
+    {
+      "symbol": "TTD",
+      "error": "No existe datasets\\predict\\TTD_predict.csv"
+    },
+    {
+      "symbol": "FAST",
+      "error": "No existe datasets\\predict\\FAST_predict.csv"
+    },
+    {
+      "symbol": "TEAM",
+      "error": "No existe datasets\\predict\\TEAM_predict.csv"
+    },
+    {
+      "symbol": "CSGP",
+      "error": "No existe datasets\\predict\\CSGP_predict.csv"
+    },
+    {
+      "symbol": "DLTR",
+      "error": "No existe datasets\\predict\\DLTR_predict.csv"
+    },
+    {
+      "symbol": "VRSK",
+      "error": "No existe datasets\\predict\\VRSK_predict.csv"
+    },
+    {
+      "symbol": "PCAR",
+      "error": "No existe datasets\\predict\\PCAR_predict.csv"
+    },
+    {
+      "symbol": "CPRT",
+      "error": "No existe datasets\\predict\\CPRT_predict.csv"
+    },
+    {
+      "symbol": "CTAS",
+      "error": "No existe datasets\\predict\\CTAS_predict.csv"
+    },
+    {
+      "symbol": "XEL",
+      "error": "No existe datasets\\predict\\XEL_predict.csv"
+    },
+    {
+      "symbol": "ANSS",
+      "error": "No existe datasets\\predict\\ANSS_predict.csv"
+    },
+    {
+      "symbol": "SIRI",
+      "error": "No existe datasets\\predict\\SIRI_predict.csv"
+    },
+    {
+      "symbol": "BKR",
+      "error": "No existe datasets\\predict\\BKR_predict.csv"
+    },
+    {
+      "symbol": "ALGN",
+      "error": "No existe datasets\\predict\\ALGN_predict.csv"
+    },
+    {
+      "symbol": "SGEN",
+      "error": "No existe datasets\\predict\\SGEN_predict.csv"
+    },
+    {
+      "symbol": "MTCH",
+      "error": "No existe datasets\\predict\\MTCH_predict.csv"
+    },
+    {
+      "symbol": "ZS",
+      "error": "No existe datasets\\predict\\ZS_predict.csv"
+    },
+    {
+      "symbol": "CRWD",
+      "error": "No existe datasets\\predict\\CRWD_predict.csv"
+    },
+    {
+      "symbol": "MRNA",
+      "error": "No existe datasets\\predict\\MRNA_predict.csv"
+    },
+    {
+      "symbol": "LCID",
+      "error": "No existe datasets\\predict\\LCID_predict.csv"
+    },
+    {
+      "symbol": "OKTA",
+      "error": "No existe datasets\\predict\\OKTA_predict.csv"
+    },
+    {
+      "symbol": "PDD",
+      "error": "No existe datasets\\predict\\PDD_predict.csv"
+    },
+    {
+      "symbol": "DOCU",
+      "error": "No existe datasets\\predict\\DOCU_predict.csv"
+    },
+    {
+      "symbol": "DDOG",
+      "error": "No existe datasets\\predict\\DDOG_predict.csv"
+    },
+    {
+      "symbol": "BIDU",
+      "error": "No existe datasets\\predict\\BIDU_predict.csv"
+    },
+    {
+      "symbol": "VRSN",
+      "error": "No existe datasets\\predict\\VRSN_predict.csv"
+    }
+  ],
+  "thresholds": {
+    "down_thr": -0.01,
+    "up_thr": 0.03
+  }
+}
