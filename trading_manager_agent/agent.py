@@ -6,13 +6,6 @@ from executor_agent.agent import executor_agent
 from performance_agent.agent import performance_agent
 
 
-tools_list = [
-    data_management_agent,
-    inference_agent,
-    training_agent
-]
-
-
 root_agent = LlmAgent(
     model="gemini-2.5-flash",
     name="trading_manager_agent",
@@ -39,6 +32,7 @@ root_agent = LlmAgent(
         data_management_agent,
         training_agent,
         inference_agent,
-        executor_agent
+        executor_agent,
+        performance_agent
     ]
     )
