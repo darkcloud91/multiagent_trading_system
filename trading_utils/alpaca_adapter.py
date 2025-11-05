@@ -110,3 +110,15 @@ class AlpacaAPI:
         except Exception as e:
             print(f"Error al cancelar la orden {order_id}: {e}")
             return None
+    
+    def get_available_cash(self) -> Optional[float]:
+        """Obtiene y devuelve el saldo de efectivo disponible para operar (cash)."""
+        try:
+            account = self.trading_client.get_account()
+            if hasattr(account, 'cash') and account.cash is not None:
+                # Retorna el saldo como un flotante para su uso
+                return float(account.cash)
+            return None
+        except Exception as e:
+            print(f"Error al obtener el saldo de efectivo: {e}")
+            return None

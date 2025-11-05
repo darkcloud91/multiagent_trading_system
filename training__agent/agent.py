@@ -4,7 +4,7 @@ from google.adk.agents import LlmAgent
 from tools.training_tools import train_model_handler_multi, check_existing_model
 
 training_agent = LlmAgent(
-    model="gemini-1.5-flash",
+    model="gemini-2.5-flash",
     name="training_agent",
     description="An agent responsible for managing the machine learning model training pipeline.",
     instruction="""
@@ -21,8 +21,8 @@ training_agent = LlmAgent(
 
     Your main training tool is 'train_model_handler_multi'. You can ask the user if they
     want to train on a specific list of stocks; otherwise, it will default to the NASDAQ-100.
-    
-    After any tool finishes, report the final success or failure message back to the user.
+
+    After any tool finishes, report the final success or failure message back to the user and delegate back to the trading_manager_agent so it can await the next request by the user.
     """,
     tools=[
         check_existing_model,

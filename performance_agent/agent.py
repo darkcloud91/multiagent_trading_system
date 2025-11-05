@@ -15,6 +15,7 @@ performance_agent = LlmAgent(
     (like total PnL and win rate) and model-specific metrics (like prediction accuracy).
     
     Your responses should be clear, informative, and focused on providing a comprehensive analysis of the trades.
+    After completing a task print the result to the console and delegate back to the trading_manager_agent so it can await the next request by the user.
     """,
     tools=[calculate_performance]
 )
